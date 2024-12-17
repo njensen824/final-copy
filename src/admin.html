@@ -15,6 +15,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="database.html">Database</a></li>
+                    <li><a href="https://dsu.edu" target="_blank">Obligatory External Link</a></li>
                 </ul>
             </nav>
             <a id="login" href="login.html">Login</a>
@@ -44,7 +45,16 @@
             <form id="add-animal-form">
                 <h2>Add a New Animal</h2>
                 <input type="text" id="animal-name" placeholder="Name" required>
-                <input type="text" id="animal-species" placeholder="Species" required>
+                <select id="animal-species" placeholder="Species" required>
+                    <option value="" selected disabled hidden>Species</option>
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Rabbit">Rabbit</option>
+                    <option value="Gecko">Gecko</option>
+                    <option value="Parrot">Parrot</option>
+                    <option value="Fish">Fish</option>
+                    <option value="Other">Other</option>
+                </select>
                 <input type="text" id="animal-breed" placeholder="Breed">
                 <input type="number" id="animal-days-sheltered" placeholder="Days Sheltered" required>
                 <label>

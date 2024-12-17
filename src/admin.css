@@ -160,6 +160,18 @@ form input {
     border: 2px solid #fcdad2;
     background-color: #fcdad2;
     transition: 150ms ease;
+    color: #acacac;
+}
+
+select {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    padding: 1em;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid #fcdad2;
+    background-color: #fcdad2;
+    transition: 150ms ease;
 }
 
 form input:hover {
@@ -215,6 +227,10 @@ form div.incorrect label {
 
 form div.incorrect input {
     border-color: #f1260f;
+}
+
+select::invalid {
+    color: #f1260f;
 }
 
 /* ==== conditional formatting for mobile ==== */
