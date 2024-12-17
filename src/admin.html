@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="admin.css" rel="stylesheet" type="text/css">
+        <script defer src="nav.js"></script>
+        <script defer src="db.js"></script>
+        <title>Rescue Nest | Admin Database</title>
+    </head>
+    <body>
+        <header>
+            <h1>Rescue Nest</h1>
+            <nav id="nav-bar">
+                <ul id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="database.html">Database</a></li>
+                </ul>
+            </nav>
+            <a id="login" href="login.html">Login</a>
+            <button id="menu-toggle">☰</button>
+        </header>
+        <main>
+            <section>
+            <div id="database">
+            <h1>Shelter Database</h1>
+
+            <table id="animal-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Species</th>
+                        <th>Breed</th>
+                        <th>Days Sheltered</th>
+                        <th>Is Here?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            </div>
+        
+            <form id="add-animal-form">
+                <h2>Add a New Animal</h2>
+                <input type="text" id="animal-name" placeholder="Name" required>
+                <input type="text" id="animal-species" placeholder="Species" required>
+                <input type="text" id="animal-breed" placeholder="Breed">
+                <input type="number" id="animal-days-sheltered" placeholder="Days Sheltered" required>
+                <label>
+                    <input type="checkbox" id="animal-is-here" required><i>Is Here?</i>
+                </label>
+                <button type="submit">Add Animal</button>
+            </form>
+
+            <form id="delete-animal-form">
+                <h2>Delete Animal</h2>
+                <input type="number" name="id" id="delete-id" placeholder="Animal ID" required>
+                <button type="submit">Delete Animal</button>
+            </form>
+           </section>
+        </main>
+    </body>
+</html>

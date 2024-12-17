@@ -1,0 +1,261 @@
+/* ==== universal ==== */
+
+/* ==== header and nav ==== */
+header {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    justify-content: flex-start;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 5px #1E1E24);
+    background-color: #f9feff;
+    position: relative;
+}
+
+header h1 {
+    margin-left: 10px;
+    margin-right: 20px;
+    color: #1E1E24;
+    font-style: italic;
+}
+
+#nav-links {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-right: 30px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #1E1E24;
+}
+
+#login {
+    justify-self: right;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+#menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #1E1E24;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+}
+
+#login {
+    text-decoration: none;
+    color: #1E1E24;
+    font-style: italic;
+    font-weight: bold;
+}
+
+header a:hover, #login:hover {
+    text-decoration: underline;
+}
+
+/* ==== body ==== */
+body {
+    background-color: #fb9f89;
+    min-height: 100vh;
+    color: #1E1E24;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9feff;
+    height: auto;
+    width: max(40%, 650px);
+    padding: 20px;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 5px #1E1E24);
+}
+
+h1, h2 {
+    justify-self: center;
+}
+
+#animal-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+#animal-table thead tr {
+    background-color: #fb9f89;
+    text-align: left;
+    font-weight: bold;
+}
+
+#animal-table th,
+#animal-table td {
+    padding: 12px 15px;
+}
+
+#animal-table tbody tr {
+    border-bottom: 1px solid #b5b5b6;
+    border-left: 1px solid #fb9f89;
+    border-right: 1px solid #fb9f89;
+}
+
+#animal-table tbody tr:nth-of-type(even) {
+    background-color: #fcdad2;
+}
+
+#animal-table tbody tr:last-of-type {
+    border-bottom: 2px solid #fb9f89;
+}
+
+#animal-table tbody tr:hover {
+    font-style: italic;
+    color: #fb9f89;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: min(400px, 100%);
+    gap: 10px;
+}
+
+form > * {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form input {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 25px;
+    padding: 1em;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid #fcdad2;
+    background-color: #fcdad2;
+    transition: 150ms ease;
+}
+
+form input:hover {
+    border-color: #e66443;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #e66443;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #e66443;
+}
+
+#animal-is-here {
+    flex-grow: 0;
+    justify-self: left;
+    height: 20px;
+    width: 20px;
+    background-color: #fcdad2;
+}
+
+#animal-is-here:hover {
+    cursor: pointer;
+}
+
+form button {
+    width: 200px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 100px;
+    padding: .85em 4em;
+    background-color: #FB9F89;
+    font-style: italic;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+
+form button:hover {
+    background-color: #e66443;
+}
+
+form button:focus {
+    outline: none;
+    background-color: #e66443;
+}
+
+form div.incorrect label {
+    background-color: #f1260f;
+}
+
+form div.incorrect input {
+    border-color: #f1260f;
+}
+
+/* ==== conditional formatting for mobile ==== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    header h1 {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #nav-links, #login {
+        display: none !important;
+        flex-direction: column;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav.active #nav-links, #login.active {
+        display: block !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav li {
+        margin: 0px;
+        margin-bottom: 5px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #menu-toggle {
+        display: block;
+    }
+}

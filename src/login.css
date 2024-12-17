@@ -1,0 +1,229 @@
+/* ==== universal ==== */
+
+/* ==== header and nav ==== */
+header {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    justify-content: flex-start;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 5px #1E1E24);
+    background-color: #f9feff;
+    position: relative;
+}
+
+header h1 {
+    margin-left: 10px;
+    margin-right: 20px;
+    color: #1E1E24;
+    font-style: italic;
+}
+
+#nav-links {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-right: 30px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #1E1E24;
+}
+
+#menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #1E1E24;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+}
+
+#login {
+    text-decoration: none;
+    color: #1E1E24;
+    font-style: italic;
+    font-weight: bold;
+}
+
+header a:hover, #login:hover {
+    text-decoration: underline;
+}
+
+/* ==== body ==== */
+body {
+    background-color: #fb9f89;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.form-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9feff;
+    height: 50vh;
+    width: max(40%, 600px);
+    padding: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 5px #1E1E24);
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.form-display h1 {
+    font-size: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: min(400px, 100%);
+    gap: 10px;
+}
+
+form > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: #FB9F89;
+    fill: #1E1E24;
+    border-radius: 10px 0 0 10px;
+}
+
+form input { /* yeah i looked this stuff up sue me */
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid #fcdad2;
+    border-left: none;
+    background-color: #fcdad2;
+    transition: 150ms ease;
+}
+
+form input:hover {
+    border-color: #e66443;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #e66443;
+}
+
+div:has(input:focus) > label {
+    background-color: #e66443;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #e66443;
+}
+
+form button {
+    margin-top: 10px;
+    border: none;
+    border-radius: 100px;
+    padding: .85em 4em;
+    background-color: #FB9F89;
+    font-style: italic;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+
+form button:hover {
+    background-color: #e66443;
+}
+
+form button:focus {
+    outline: none;
+    background-color: #e66443;
+}
+
+form div.incorrect label {
+    background-color: #f1260f;
+}
+
+form div.incorrect input {
+    border-color: #f1260f;
+}
+
+#error-message {
+    color: #f1260f;
+}
+
+/* ==== conditional formatting for mobile ==== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    header h1 {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #nav-links {
+        display: none !important;
+        flex-direction: column;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav.active #nav-links {
+        display: block !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav li {
+        margin: 0px;
+        margin-bottom: 5px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #menu-toggle {
+        display: block;
+    }
+}
